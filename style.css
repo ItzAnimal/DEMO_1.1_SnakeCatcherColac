@@ -1,0 +1,224 @@
+:root{
+  --orange:#fd7601;
+  --panel: rgba(255,255,255,.10);
+  --panel-strong: rgba(0,0,0,.20);
+  --divider: rgba(255,255,255,.30);
+  --radius:12px;
+}
+
+/* Base */
+*{box-sizing:border-box}
+body{margin:0;font-family:sans-serif;background:var(--orange);color:#fff;text-align:center}
+header{padding:30px 20px}
+h1{margin:0 0 20px}
+
+/* Layout */
+.container{display:flex; justify-content:center; gap:20px; margin:40px auto; max-width:1100px; padding:0 16px}
+.panel{background:var(--panel); border-radius:var(--radius); max-height: 2020px; padding:20px}
+
+/* Left column */
+.logo-box{width:260px; text-align:left}
+
+/* Logo area (expand) */
+.logo-area{background:rgba(255,255,255,.06); border-radius:10px; padding:12px; cursor:pointer; outline:none; overflow:hidden; max-height:170px; transition:max-height .45s ease, background .25s ease}
+.logo-area.open{max-height:280px; background:rgba(255,255,255,.10)}
+.logo{width:100%; height:auto; display:block; object-fit:contain; margin:0 auto}
+.logo-extra{opacity:0; transform:translateY(-6px); transition:opacity .28s ease, transform .28s ease; text-align:center; margin-top:8px; font-weight:600}
+.logo-area.open .logo-extra{opacity:1; transform:translateY(0)}
+
+.divider{margin:16px 0; border:none; border-top:1px solid var(--divider)}
+
+/* Services nav */
+.extra-inner{background:rgba(0,0,0,.25); border-radius:8px; padding:14px}
+.services-title{display:block; margin:4px 0 10px; cursor:pointer}
+.services-title:focus{outline:2px solid rgba(255,255,255,.6); outline-offset:2px}
+
+.nav-link{display:block; padding:10px 12px; border-radius:8px; color:#fff; text-decoration:none; background:transparent; transition:background .2s ease, transform .12s ease; line-height:1.1}
+.nav-link:hover{background:rgba(255,255,255,.10)}
+.nav-link:active{transform:scale(.98)}
+.nav-link.active{background:rgba(255,255,255,.18)}
+
+/* Victorian Snakes button styled like nav */
+.grow-box{margin-top:16px}
+.btn-link{display:block; padding:10px 12px; border-radius:8px; color:#fff; text-align:left; background:transparent; border:none; cursor:pointer; transition:background .2s ease, transform .12s ease; line-height:1.1; width:100%}
+.btn-link:hover{background:rgba(255,255,255,.10)}
+.btn-link:active{transform:scale(.98)}
+.btn-link.active{background:rgba(255,255,255,.18)}
+
+/* Right column */
+.text-box{flex:2; text-align:center}
+.card{background:rgba(255,255,255,.10); border-radius:10px; padding:18px 20px}
+.intro{margin-bottom:22px}
+
+/* START section */
+.start-split{display:flex; align-items:center; justify-content:space-between; gap:18px}
+.start-left{flex:1; min-width:0}
+.start-left p{max-width:36ch}
+.start-right{flex:0 0 260px; display:flex; justify-content:center}
+.start-img{max-width:100%; height:auto; display:block; border-radius:8px}
+.start-line{margin:0 0 8px; font-size:1.05em; line-height:1.35}
+.phone-link{display:inline-block; margin-top:12px; font-size:1.1em; font-weight:700; color:#fff; background:rgba(0,0,0,.2); padding:6px 14px; border-radius:8px; text-decoration:none}
+
+/* ===== Service sections (consistent spacing) ===== */
+.service-section{background:var(--panel-strong); border-radius:10px; margin:14px 0; overflow:visible; max-height:0; opacity:0; padding:0 18px; transform-origin:0 0; transition:max-height .55s ease, opacity .35s ease, transform .45s ease, padding .35s ease; transform:translateY(-6px) scaleY(.98); position:relative}
+.service-section::before{content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(255,255,255,.18),rgba(255,255,255,0)); transform:translateX(-100%); pointer-events:none; opacity:0}
+.service-section.just-opened::before{animation:sweep .7s ease forwards; opacity:1}
+@keyframes sweep{from{transform:translateX(-100%); opacity:1} 70%{transform:translateX(0); opacity:.6} to{opacity:0}}
+.service-section > *{opacity:0; transition:opacity .32s ease .18s}
+.service-section.active{max-height:700px; opacity:1; margin:14px 0; padding:18px; transform:translateY(0) scaleY(1)}
+.service-section.active > *{opacity:1}
+
+/* Close button (floats outside, bigger) */
+.close-btn{position:absolute; top:-14px; right:-14px; width:40px; height:40px; border-radius:50%; border:none; background:#e53935; color:#fff; font-size:22px; line-height:40px; text-align:center; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,.3); opacity:0; transform:translateY(-6px); transition:opacity .3s ease, transform .3s ease, box-shadow .2s ease}
+.close-btn:hover{box-shadow:0 6px 16px rgba(0,0,0,.35)}
+.service-section.active .close-btn{opacity:1; transform:translateY(0)}
+
+/* Copy popup */
+.copy-popup{position:fixed; bottom:40px; left:50%; transform:translateX(-50%) translateY(20px); background:#4caf50; color:#fff; padding:10px 18px; border-radius:8px; opacity:0; transition:opacity .3s ease, transform .3s ease; z-index:9999}
+.copy-popup.visible{opacity:1; transform:translateX(-50%) translateY(0)}
+
+/* Logo hotline text */
+.logo-extra .tagline{line-height:1.4; margin:8px 0 0; font-weight:600; text-align:center}
+.logo-extra .tagline strong{display:block; margin-top:4px; font-size:1.2em}
+
+/* ===== Discord corner widget (RIGHT) ===== */
+.discord-fab{position:fixed; bottom:16px; right:16px; width:64px; height:64px; border-radius:999px; background:#5865F2; color:#fff; display:flex; align-items:center; justify-content:center; box-shadow:0 12px 24px rgba(0,0,0,.35); cursor:pointer; z-index:10000; transition:transform .15s ease; animation:fab-float 3s ease-in-out infinite}
+.discord-fab:hover{transform:translateY(-2px)}
+.fab-logo{width:34px; height:34px}
+.fab-arrow{position:absolute; bottom:68px; right:50%; transform:translateX(50%); width:28px; height:28px; border-radius:999px; background:rgba(0,0,0,.35); display:flex; align-items:center; justify-content:center; pointer-events:auto; z-index:10002; cursor:pointer}
+.fab-arrow::before{content:'▲'; font-size:14px; opacity:.9}
+.discord-fab.active .fab-arrow{display:none}
+
+.discord-panel{position:fixed; bottom:16px; right:16px; max-width:360px; background:rgba(0,0,0,.88); border:1px solid rgba(255,255,255,.12); border-radius:12px; padding:14px 14px 16px; color:#fff; box-shadow:0 18px 36px rgba(0,0,0,.45); opacity:0; transform:translateY(12px) scale(.98); pointer-events:none; transition:opacity .25s ease, transform .25s ease; z-index:10001}
+.discord-panel.open{opacity:1; transform:translateY(0) scale(1); pointer-events:auto}
+.dp-header{display:flex; align-items:center; gap:10px; margin-bottom:6px}
+.dp-logo{width:24px; height:24px; color:#fff}
+.dp-text{margin:4px 0 10px; opacity:.95}
+.dp-cta{display:inline-block; font-weight:700; text-decoration:none; background:#5865F2; color:#fff; padding:8px 12px; border-radius:8px}
+.dp-cta:hover{filter:brightness(1.05)}
+
+@keyframes fab-float{0%,100%{transform:translateY(0)} 50%{transform:translateY(-4px)}}
+
+/* Responsive */
+@media (max-width:800px){
+  .container{flex-direction:column; align-items:stretch}
+  .logo-box{width:100%}
+  .start-split{flex-direction:column-reverse; gap:12px}
+  .start-right{flex:0 0 auto}
+}
+@media (max-width:480px){
+  .discord-fab{bottom:12px; right:12px; width:58px; height:58px}
+  .fab-logo{width:30px; height:30px}
+  .fab-arrow{bottom:62px; width:26px; height:26px}
+  .discord-panel{bottom:12px; right:12px; max-width:86vw}
+}
+/* === Victorian Snakes: tabs + list + detail === */
+.vs-tabs{ display:flex; gap:8px; margin:8px 0 12px; flex-wrap:wrap }
+.vs-tab{
+  background:transparent; color:#fff; border:1px solid rgba(255,255,255,.18);
+  border-radius:999px; padding:8px 12px; cursor:pointer;
+  transition:background .2s ease, transform .12s ease;
+}
+.vs-tab:hover{ background:rgba(255,255,255,.08) }
+.vs-tab:active{ transform:scale(.98) }
+.vs-tab.active{ background:rgba(255,255,255,.18) }
+
+.sp-item em{ opacity:.9; font-style:italic; margin-left:6px; font-size:.95em }
+
+.sp-detail{
+  background:rgba(255,255,255,.10);
+  border-radius:10px; border:1px solid rgba(255,255,255,.18);
+  padding:14px 16px; animation:spdetail-in .25s ease;
+}
+@keyframes spdetail-in{ from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:translateY(0)} }
+
+.spd-head{ margin-bottom:8px }
+.spd-title{ margin:0 0 2px; font-size:1.25rem }
+.spd-latin{ margin:0 0 8px; opacity:.9 }
+.spd-chips{ display:flex; gap:8px; flex-wrap:wrap }
+.spd-chip{
+  display:inline-block; padding:4px 8px; border-radius:999px; font-weight:700; font-size:.85em;
+  border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.08)
+}
+.spd-chip.danger{ background:rgba(229,57,53,.25); border-color:rgba(229,57,53,.45) }
+.spd-chip.caution{ background:rgba(253,193,64,.28); border-color:rgba(253,193,64,.55) }
+.spd-chip.mild{ background:rgba(76,175,80,.28); border-color:rgba(76,175,80,.55) }
+
+.spd-body{ margin-top:6px }
+.spd-bullets{ margin:8px 0 0 16px }
+.spd-bullets li{ margin:4px 0 }
+/* === Victorian Snakes: image card grid === */
+.vs-list{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columns desktop/tablet */
+  gap:16px;
+  margin-bottom:12px;
+}
+
+@media (max-width: 560px){
+  .vs-list{ grid-template-columns: 1fr; } /* 1 column on small screens */
+}
+
+.sp-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  color:#fff;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:10px;
+  padding:12px;
+  cursor:pointer;
+  transition:transform .15s ease, background .2s ease, box-shadow .2s ease;
+}
+.sp-item:hover{
+  background:rgba(255,255,255,.12);
+  transform:translateY(-2px);
+  box-shadow:0 10px 18px rgba(0,0,0,.25);
+}
+.sp-item:active{ transform:translateY(0) scale(.99) }
+
+.sp-item img{
+  width:100%;
+  max-width:180px;    /* keeps cards tidy */
+  aspect-ratio: 4/3;  /* consistent crop boxes */
+  object-fit: cover;
+  border-radius:8px;
+  display:block;
+  margin-bottom:10px;
+}
+
+.sp-name{
+  font-weight:800;
+  line-height:1.2;
+}
+.sp-latin{
+  opacity:.9;
+  font-size:.9em;
+  margin-top:2px;
+}
+
+/* Keep visible focus outline accessible */
+.sp-item.active,
+.sp-item:focus-visible{
+  outline:2px solid rgba(255,255,255,.35);
+  outline-offset:2px;
+}
+.photo-note {
+  margin-top: 14px;
+  font-size: 0.85em;
+  opacity: 0.8;
+  text-align: center;
+}
+
+/* Prevent fixed footer from covering content */
+body { padding-bottom: 80px; }              /* room for footer height */
+@media (max-width: 640px){
+  body { padding-bottom: 96px; }            /* a bit more on small screens */
+}
+/* Disable interaction when a section is closed */
+.service-section:not(.active) .sp-item,
+.service-section:not(.active) .vs-tab {
+  pointer-events: none;
+}

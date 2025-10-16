@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="description" content="24/7 licensed snake removal and relocation for Colac, the Surf Coast, Otways, Geelong and surrounds. Call 0498 063 229." />
+<meta property="og:title" content="Snake Catcher Colac — 24/7" />
+<meta property="og:description" content="Licensed snake removal and relocation across the Great South-West. Call 0498 063 229." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="benny.jpg" />
+<meta name="theme-color" content="#fd7601" />
+<link rel="icon" href="benny-logo.png" />
+  <title>Snake Catcher Colac</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Snake Catcher Colac</h1>
+
+    <div class="container">
+      <!-- LEFT -->
+      <aside class="panel logo-box" id="leftAside">
+        <div class="logo-area" id="logoArea" role="button" aria-expanded="false" aria-controls="logoExtra" tabindex="0" title="Click to expand">
+          <img src="Benny Logo.png" alt="Snake Catcher Colac logo" class="logo">
+          <div class="logo-extra" id="logoExtra">
+            <p class="tagline">24/7 Emergency:<br><strong>0498 063 229</strong></p>
+          </div>
+        </div>
+        <hr class="divider">
+
+        <nav class="extra-inner" id="servicesNav" aria-label="Services">
+          <strong class="services-title" id="servicesToggle" role="button" tabindex="0">Services</strong>
+          <a href="#snake-removal" class="nav-link" data-target="snake-removal" role="link">Snake Removal</a>
+          <a href="#snake-talks"   class="nav-link" data-target="snake-talks" role="link">Snake Talks</a>
+          <a href="#contact"       class="nav-link" data-target="contact" role="link">Contact &amp; Locations</a>
+        </nav>
+
+        <section class="extra-inner grow-box no-grow" id="vicBox">
+          <button class="grow-title btn-link" id="vicToggle" type="button">Victorian Snakes</button>
+        </section>
+      </aside>
+      <!-- RIGHT -->
+      <main class="panel text-box">
+        <section class="intro card">
+          <h2>The Snake Catcher - Benny McNamara</h2>
+          <p>Hi, I’m Benny McNamara, your local licensed snake catcher based right here in Colac. I run Snake Catcher Colac, helping the Colac region, Surf Coast, Otways, Geelong, and surrounding areas across the Great South-West with safe and professional snake removal and relocation.</p>
+        </section>
+        <section id="start-here" class="card start-card">
+          <div class="start-split">
+            <div class="start-left">
+              <p class="start-line">
+                To begin, click one of the links on the left.<br>
+                Or click the number below!
+              </p>
+              <a href="tel:0498063229" class="phone-link" data-copy="0498063229">0498 063 229</a>
+            </div>
+            <div class="start-right">
+              <img src="benny.jpg" class="start-img" alt="Benny McNamara holding a wombat">
+            </div>
+          </div>
+        </section>
+        <section id="snake-removal" class="service-section card" aria-labelledby="sr-title">
+          <button class="close-btn" type="button" aria-label="Close">×</button>
+          <h2 id="sr-title">Snake Removal</h2>
+          <ul class="bullets">
+            <li>⚠️ If you spot a snake, <strong>keep a close eye on it</strong> and ensure it does not leave your sight.</li>
+            <li>🚫 Do not provoke the snake or attempt to catch it yourself.</li>
+            <li>📞 Call us immediately at <strong>0498 063 229</strong>.</li>
+          </ul>
+          <p class="disclaimer"><em><strong>Disclaimer:</strong> Call-out fees apply. Snakes are safely relocated to a designated release area upon capture.</em></p>
+        </section>
+
+        <section id="snake-talks" class="service-section card" aria-labelledby="st-title">
+          <button class="close-btn" type="button" aria-label="Close">×</button>
+          <h2 id="st-title">Snake Talks</h2>
+          <p>We offer engaging snake awareness talks for schools, community groups, and events. Sessions cover identification, safety, and coexistence with local wildlife.</p>
+        </section>
+
+        <section id="contact" class="service-section card" aria-labelledby="ct-title">
+          <button class="close-btn" type="button" aria-label="Close">×</button>
+          <h2 id="ct-title">Contact &amp; Locations</h2>
+          <p><strong>Base:</strong> Colac, VIC</p>
+          <p><strong>Service area:</strong> Colac region, Geelong, Surf Coast, Otways, and the surrounding areas of the Great South-West.</p>
+          <p>For urgent removals, call <strong>0498 063 229</strong>.</p>
+        </section>
+
+        <!-- ******** Victorian Snakes (tabs → list → detail) ******** -->
+        <section id="victorian-snakes" class="service-section card" aria-labelledby="vs-title">
+          <button class="close-btn" type="button" aria-label="Close">×</button>
+          <h2 id="vs-title">Victorian Snakes</h2>
+
+          <p class="muted">Browse by category. Click a species to see details.</p>
+
+          <!-- Category tabs -->
+          <div class="vs-tabs" role="tablist" aria-label="Snake categories">
+            <button class="vs-tab active" role="tab" aria-selected="true" data-cat="venomous" id="tab-venomous">Venomous</button>
+            <button class="vs-tab" role="tab" aria-selected="false" data-cat="python" id="tab-python">Pythons</button>
+          </div>
+
+          <!-- Species list -->
+          <div class="vs-list" id="vsList" aria-labelledby="vs-title">
+  <!-- Venomous (2x2 grid) -->
+  <button class="sp-item" data-id="eastern-brown" data-cat="venomous">
+    <img src="img/snakes/eastern-brown.jpg" alt="Eastern Brown Snake">
+    <span class="sp-name">Eastern Brown Snake</span>
+    <em class="sp-latin">Pseudonaja textilis</em>
+  </button>
+
+  <button class="sp-item" data-id="tiger" data-cat="venomous">
+    <img src="img/snakes/tiger.jpg" alt="Tiger Snake">
+    <span class="sp-name">Tiger Snake</span>
+    <em class="sp-latin">Notechis scutatus</em>
+  </button>
+
+  <button class="sp-item" data-id="red-bellied" data-cat="venomous">
+    <img src="img/snakes/red-bellied.jpg" alt="Red-bellied Black Snake">
+    <span class="sp-name">Red-bellied Black Snake</span>
+    <em class="sp-latin">Pseudechis porphyriacus</em>
+  </button>
+
+  <button class="sp-item" data-id="copperhead" data-cat="venomous">
+    <img src="img/snakes/copperhead.jpg" alt="Lowland Copperhead">
+    <span class="sp-name">Lowland Copperhead</span>
+    <em class="sp-latin">Austrelaps superbus</em>
+  </button>
+
+  <!-- Pythons (2 columns) -->
+  <button class="sp-item" data-id="diamond-python" data-cat="python" hidden>
+    <img src="img/snakes/diamond-python.jpg" alt="Diamond Python">
+    <span class="sp-name">Diamond Python</span>
+    <em class="sp-latin">Morelia spilota spilota</em>
+  </button>
+
+  <button class="sp-item" data-id="murray-darling" data-cat="python" hidden>
+    <img src="img/snakes/murray-darling.jpg" alt="Murray Darling Python">
+    <span class="sp-name">Murray Darling Python</span>
+    <em class="sp-latin">Morelia spilota metcalfei</em>
+  </button>
+</div>
+
+
+          <!-- Detail panel (filled by JS) -->
+          <article class="sp-detail" id="spDetail" aria-live="polite" aria-atomic="true" hidden>
+            <header class="spd-head">
+              <h3 class="spd-title">Species name</h3>
+              <p class="spd-latin"><em>Latin name</em></p>
+              <div class="spd-chips"></div>
+            </header>
+            <div class="spd-body">
+              <p class="spd-desc"></p>
+              <ul class="spd-bullets"></ul>
+            </div>
+            <div class="callout neutral spd-footer">
+              Keep a safe distance, keep visual contact, secure pets/kids, and call <strong>0498 063 229</strong> for removal.
+            </div>
+          </article>
+			
+			<p class="photo-note">
+  Images displayed are sourced under Creative Commons free use.
+</p>
+
+        </section>
+        <!-- ******** /Victorian Snakes ******** -->
+      </main>
+    </div>
+  </header>
+
+  <footer><p>© 2025 Snake Catcher Colac</p></footer>
+
+  <!-- Discord Widget (no arrow) -->
+  <div class="discord-fab" id="discordFab" role="button" aria-expanded="false" aria-controls="discordPanel" tabindex="0" title="Join our Discord">
+    <svg class="fab-logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.222 4.667A19.9 19.9 0 0 0 16.9 3.6a13.87 13.87 0 0 0-.633 1.318 18.5 18.5 0 0 0-4.534 0A13.7 13.7 0 0 0 11.1 3.6a19.9 19.9 0 0 0-3.322 1.067C4.11 8.178 3.478 11.6 3.754 14.967a19.98 19.98 0 0 0 3.98 2.024c.322-.444.61-.915.857-1.408c-.47-.178-.918-.4-1.34-.663c.112-.083.222-.168.328-.256c2.556 1.2 5.317 1.2 7.856 0c.106.088.216.173.328.256c-.421.263-.869.485-1.34.663c.247.493.535.964.857 1.408a19.98 19.98 0 0 0 3.98-2.024c.329-4.033-.56-7.415-2.038-10.3ZM9.6 13.533c-.74 0-1.342-.68-1.342-1.515c0-.835.594-1.515 1.342-1.515s1.351.68 1.342 1.515c0 .835-.594 1.515-1.342 1.515m4.8 0c-.74 0-1.342-.68-1.342-1.515c0-.835.594-1.515 1.342-1.515s1.351.68 1.342 1.515c0 .835-.594 1.515-1.342 1.515"/></svg>
+  </div>
+  <div class="discord-panel" id="discordPanel" role="dialog" aria-label="Discord invite" tabindex="-1">
+    <div class="dp-header">
+      <svg class="dp-logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.222 4.667A19.9 19.9 0 0 0 16.9 3.6a13.87 13.87 0 0 0-.633 1.318 18.5 18.5 0 0 0-4.534 0A13.7 13.7 0 0 0 11.1 3.6a19.9 19.9 0 0 0-3.322 1.067C4.11 8.178 3.478 11.6 3.754 14.967a19.98 19.98 0 0 0 3.98 2.024c.322-.444.61-.915.857-1.408c-.47-.178-.918-.4-1.34-.663c.112-.083.222-.168.328-.256c2.556 1.2 5.317 1.2 7.856 0c.106.088.216.173.328.256c-.421.263-.869.485-1.34.663c.247.493.535.964.857 1.408a19.98 19.98 0 0 0 3.98-2.024c.329-4.033-.56-7.415-2.038-10.3ZM9.6 13.533c-.74 0-1.342-.68-1.342-1.515c0-.835.594-1.515 1.342-1.515s1.351.68 1.342 1.515c0 .835-.594 1.515-1.342 1.515m4.8 0c-.74 0-1.342-.68-1.342-1.515c0-.835.594-1.515 1.342-1.515s1.351.68 1.342 1.515c0 .835-.594 1.515-1.342 1.515"/></svg>
+      <strong>We have a Discord server!</strong>
+    </div>
+    <p class="dp-text">Hang out, ask questions, and get updates.</p>
+    <a class="dp-cta" href="https://discord.gg/pYPjtRBqTR" target="_blank" rel="noopener">Join the server</a>
+  </div>
+
+  <!-- Facebook Widget -->
+  <div class="discord-fab" style="bottom:90px; background:#3b5998" title="Visit our Facebook" onclick="window.open('https://www.facebook.com/colacsnakecatcher')">
+    <svg class="fab-logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.2 3-3.2.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.2l-.4 3h-1.8v7A10 10 0 0 0 22 12Z"/></svg>
+  </div>
+
+  <!-- Instagram Widget -->
+  <div class="discord-fab" style="bottom:164px; background:#E4405F" title="Visit our Instagram" onclick="window.open('https://www.instagram.com/snakecatchercolac/')">
+    <svg class="fab-logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7m10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10m-5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10m0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6m4.8-.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2Z"/></svg>
+  </div>
+
+  <!-- Load JS last so all elements exist -->
+  <script src="script.js"></script>
+</body>
+</html>
